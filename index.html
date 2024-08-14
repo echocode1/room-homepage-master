@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    
+    <title>echocode1 | Room homepage</title>
+
+  </head>
+  <body class="font-spartan h-content">
+    <section class="md:grid md:grid-cols-10 md:h-3/5 lg:h-4/6 lg:grid-cols-11 xl:grid-cols-10">
+      <!-- header section -->
+      <header id="header" class="relative w-full md:col-span-6 lg:col-span-6">
+        <!-- to set the position of the carousel slide at the bottom of the images -->
+        <div id="header-top">
+          <div class=" relative md:hidden">
+            <div id="mobile-image-slide">
+              <img class="w-full" src="images/mobile-image-hero-1.jpg" alt="hero-img1">
+              <img class="w-full hidden" src="images/mobile-image-hero-2.jpg" alt="hero-img2">
+              <img class="w-full hidden" src="images/mobile-image-hero-3.jpg" alt="hero-img3">
+            </div>
+            <div class=" absolute bottom-0 right-0 flex justify-between bg-black md:hidden">
+              <button id="icon-prev-m" class="px-8 py-7">
+                <img src="images/icon-angle-left.svg" alt="icon-left" class="h-4 w-3">
+              </button>
+              <button id="icon-next-m" class="px-8 py-7">
+                <img src="images/icon-angle-right.svg" alt="icon-right" class="h-4 w-3">
+              </button>
+            </div>
+          </div>
+          <!-- desktop slide section-->
+            <div id="desktop-images" class="hidden md:block w-full">
+              <img class="w-full" src="images/desktop-image-hero-1.jpg" alt="hero-img1">
+              <img class="w-full hidden" src="images/desktop-image-hero-2.jpg" alt="hero-img2">
+              <img class="w-full hidden" src="images/desktop-image-hero-3.jpg" alt="hero-img3">
+            </div>
+          <!--to enable the nav position at the top of the header-->
+          <div class="flex items-center justify-between absolute top-0 left-0 right-0 px-7 py-9 
+            md:justify-start md:top-0 lg:top-4 lg:px-4" id="header__top">
+            <button id="hamburger" class="hamburger md:hidden">
+              <img src="images/icon-hamburger.svg" alt="hamburger-icon">
+            </button>
+            <button class="hidden" id="exit-menu">
+              <img src="images/icon-close.svg" alt="close-icon">
+            </button>
+            <div class="flex flex-1 justify-center items-center 
+              md:justify-start md:px-3 lg:px-6 xl:px-12">
+              <img id="logo" src="images/logo.svg" alt="logo" class="md:h-3 lg:h-3 xl:h-4">
+              <nav class="text-white hidden md:flex flex-row space-x-6 lg:ml-8 md:text-xs md:ml-5
+                lg:space-x-4 lg:text-sm xl:ml-16 xl:space-x-10 xl:text-lg" id="nav-link">
+                <a href="">home</a>
+                <a href="">shop</a>
+                <a href="">about</a>
+                <a href="">contact</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="nav-overlay"></div>
+      </header>
+      <!-- 2nd-section ,the right top of desktop mode -->
+      <article class="relative p-14 px-8 bg-white text-black text-sx w-full flex-col justify-center 
+        md:col-span-4 lg:px-20 md:pt-0 md:flex lg:col-span-5 xl:col-span-4 xl:px-20">
+        <div id=" slide-headers" class="text-4xl mb-6 font-bold md:text-2xl md:leading-6 md:mb-2
+          lg:mb-4 lg:leading-8 lg:text-3xl xl:text-4xl ">
+          <h1 class="header-active">Discover innovative ways to decorate</h1>
+          <h1 class="hidden">We are available all accross the globe</h1>
+          <h1 class="hidden">Manufactured with the best materials</h1>
+        </div>
+        <div class="text-darkgray mb-8 md:text-10px lg:text-11px md:mb-6 xl:text-sm " id="ptexts">
+          <p class="active-pText">
+            We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your 
+            own style with our collection and make your property a reflection of you and what you love.
+          </p>
+          <p class="hidden">
+            With stores all over the world, its's easy for you to find furniture for your home or 
+            places of business.Locally, we're in most major cities throughout the country.Find
+            the branch nearest you using our store locator. Any questions? Don't hesistate to contact us
+          </p>
+          <p class="hidden">
+            Our modern furniture stores provide a high level of quality. Our company has invested in advanced
+            technology to ensure that every product is made as perfect and as consistent as possible.
+            With three decades of experience in this industry ,we understand what customers want for their
+            home office.
+          </p>
+        </div>
+        <div class="flex items-center text-black">
+          <p id="pointer-text" class="font-semibold tracking-15px 
+            md:tracking-5px lg:tracking-15px ">SHOP NOW
+          </p>
+          <img class=" ml-6 md:ml-4 lg:ml-6" src="images/icon-arrow.svg" alt="arrow-icon">
+        </div>
+        <div class="hidden absolute bottom-0 left-0 justify-between bg-black md:flex ">
+          <button id="icon-previous" type="button" class="px-6 py-4 lg:px-10 lg:py-5
+            xl:py-7 xl:px-7">
+            <img src="images/icon-angle-left.svg" alt="icon-left" class="h-4 w-3 md:h-4 lg:h-5">
+          </button>
+          <button id="icon-next" type="button" class="px-6 py-4 lg:py-5 lg:px-10
+            xl:py-7 xl:px-7">
+            <img src="images/icon-angle-right.svg" alt="icon-right" class="h-4 w-3 md:h-4 lg:h-5">
+          </button>
+        </div>
+      </article>
+    </section>
+    <section class="md:grid md:grid-cols-11 md:h-2/5 lg:max-h-2/6 lg:grid-cols-10">
+      <div class="md:col-span-3 lg:col-span-3">
+        <img class="w-full h-full" src="images/image-about-dark.jpg" alt="img">
+      </div>
+      <article class="py-14 px-8 w-full md:col-span-5 md:py-8
+        lg:py-8 lg:col-span-4 xl:py-12 xl:col-span-4 xl:px-12">
+        <h2 class="mb-6 text-black text-1xl font-semibold tracking-5px 
+          md:tracking-2px md:mb-2  lg:mb-6 lg:tracking-5px">
+          ABOUT OUR FURNITURE
+        </h2>
+        <p class="text-darkgray md:text-10px lg:text-10px xl:text-sm">
+          Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.
+        </p>
+      </article>
+      <div class="md:col-span-3 lg:col-span-3">
+        <img class="w-full h-full" src="images/image-about-light.jpg" alt="light-img">
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

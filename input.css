@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#nav-link a{
+    position: relative;
+}
+#nav-link a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: hsl(0, 0%, 100%);
+    transform:scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+#nav-link a:hover::after{
+    transform: scaleX(1);
+}
+#nav-link, #icon-previous, #icon-next,
+#pointer-text, #icon-prev-m, #icon-next-m{
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+#icon-previous:hover, #icon-next:hover,
+#icon-prev-m:hover, #icon-next-m:hover{
+    background-color: hsl(0, 0%, 27%);
+}
+#icon-previous:active, #icon-next:active,
+#icon-prev-m:active, #icon-next-m:active{
+    background-color: hsl(0, 0%, 40%);
+}
+#pointer-text:hover{color: hsl(0, 0%, 27%);}
+
+@media (max-width:767px){
+    #nav-overlay{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        flex: 0 0 80%; 
+        background-color:hsl(0, 0%, 27%);
+        opacity: 40%;
+        z-index: 9;
+    }
+    #header__top{
+        z-index: 10;
+        padding: 3rem 2rem;
+    }
+    #nav-link{
+        color: black;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #nav-link a::after{background-color: black;}
+    #nav-link a:hover::after{transform: scaleX(1);}
+}
